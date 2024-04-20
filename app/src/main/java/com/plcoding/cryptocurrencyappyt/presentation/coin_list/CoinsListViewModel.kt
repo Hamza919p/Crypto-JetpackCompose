@@ -29,7 +29,7 @@ class CoinsListViewModel @Inject constructor (
                 is Resource.Success -> {
                     _coinsListState.value = CoinListState(
                         isLoading = false,
-                        data = result.data,
+                        data = result.data ?: emptyList(),
                         error = null
                     )
                 }
